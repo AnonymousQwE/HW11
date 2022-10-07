@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  width: 1680px;
+  height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+/* Коробки */
+.box1 {
+  position: absolute;
+  z-index: 1;
+  left: 550px;
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+.box2 {
+  position: absolute;
+  left: 750px;
+  width: 200px;
+  height: 200px;
+  background: rgb(69, 199, 97);
+}
+.box3 {
+  position: absolute;
+  z-index: 1;
+  left: 950px;
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+/* Человечки */
+.human1 {
+  position: absolute;
+  left: 515px;
+  top: 492px;
+}
+.human2 {
+  position: absolute;
+  right: 515px;
+  top: 492px;
+}
+.human-head {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 0px;
+  top: 0px;
+
+  background: #000;
+}
+.human-head2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 0px;
+  top: 0px;
+
+  background: #000;
+}
+.human-hand {
+  position: absolute;
+  width: 13px;
+  height: 8px;
+  top: 25px;
+  left: 12px;
+  border-radius: 10px;
+  transform: rotate(25deg);
+  border-left: 1px solid white;
+
+  background: #000;
+}
+.human-hand::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 8px;
+  top: -6px;
+  left: 8px;
+  border-radius: 10px;
+  transform: rotate(-45deg);
+  border: 1px solid white;
+
+  background: #000;
+}
+.human-hand2 {
+  position: absolute;
+  width: 13px;
+  height: 8px;
+  top: 25px;
+  left: -5px;
+  border-radius: 10px;
+  transform: rotate(-25deg);
+  border-right: 1px solid white;
+
+  background: #000;
+}
+.human-hand2::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 8px;
+  top: -6px;
+  left: -12px;
+  border-radius: 10px;
+  transform: rotate(45deg);
+  border: 1px solid white;
+
+  background: #000;
+}
+
+.human-body {
+  position: absolute;
+  width: 10px;
+  height: 35px;
+  top: 20px;
+  left: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  background: #000;
+}
+.human-leg1-1 {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  top: 50px;
+  left: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  background: #000;
+}
+.human-leg1-2 {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  top: 50px;
+  left: 10px;
+  border-radius: 10px;
+  transform: rotate(-20deg);
+  border: 1px solid white;
+
+  background: #000;
+}
+.human-leg2-1 {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  top: 50px;
+  left: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  background: #000;
+}
+.human-leg2-2 {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  top: 50px;
+  left: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  background: #000;
+}
+@keyframes anim-human1 {
+  40% {
+    left: 575px;
+    transform: rotate(0);
+  }
+  42% {
+    left: 545px;
+    top: 492px;
+    transform: rotate(0);
+  }
+  55% {
+    left: 450px;
+    top: 500px;
+    transform: rotate(-90deg);
+  }
+  70% {
+    left: 400px;
+    top: 560px;
+    transform: rotate(-90deg);
+  }
+  to {
+    left: 400px;
+    top: 560px;
+    transform: rotate(-90deg);
+  }
+}
+@keyframes anim-human2 {
+  40% {
+    right: 575px;
+    transform: rotate(0);
+  }
+  42% {
+    right: 545px;
+    top: 485px;
+    transform: rotate(0);
+  }
+  55% {
+    right: 450px;
+    top: 500px;
+    transform: rotate(90deg);
+  }
+  70% {
+    right: 400px;
+    top: 560px;
+    transform: rotate(90deg);
+  }
+  to {
+    right: 400px;
+    top: 560px;
+    transform: rotate(90deg);
+  }
+}
+@keyframes anim-block1 {
+  from {
+    left: 550px;
+  }
+  80% {
+    left: 610px;
+  }
+  90% {
+    left: 580px;
+  }
+  to {
+    left: 650px;
+  }
+}
+@keyframes anim-block2 {
+    from {
+      width: 200px;
+      left: 750px;
+    }
+    80% {
+      width: 80px;
+      height: 270px;
+      left: 810px;
+      border-radius: 80px;
+    }
+    90% {
+      width: 140px;
+      height: 230px;
+      left: 780px;
+      border-radius: 100px;
+    }
+    to {
+      width: 0;
+      height: 300px;
+      left: 850px;
+      border-radius: 150px;
+    }
+  }
+@keyframes anim-block3 {
+  from {
+    left: 950px;
+  }
+  80% {
+    left: 890px;
+  }
+  90% {
+    left: 920px;
+  }
+  to {
+    left: 850px;
+  }
+}
+@keyframes anim-human-legs1-1 {
+  15% {
+    left: 13px;
+    transform: rotate(-30deg);
+  }
+  30% {
+    left: 2px;
+    transform: rotate(20deg);
+  }
+  45% {
+    left: 13px;
+    transform: rotate(-30deg);
+  }
+  60% {
+    left: 2px;
+    transform: rotate(20deg);
+  }
+  75% {
+    left: 13px;
+    transform: rotate(-30deg);
+  }
+  99% {
+    left: 2px;
+    transform: rotate(20deg);
+  }
+}
+@keyframes anim-human-legs1-2 {
+  15% {
+    left: 3px;
+    transform: rotate(20deg);
+  }
+  30% {
+    left: 12px;
+    transform: rotate(-30deg);
+  }
+  45% {
+    left: 3px;
+    transform: rotate(20deg);
+  }
+  60% {
+    left: 12px;
+    transform: rotate(-30deg);
+  }
+  75% {
+    left: 3px;
+    transform: rotate(20deg);
+  }
+  99% {
+    left: 12px;
+    transform: rotate(-30deg);
+  }
+}
+@keyframes anim-human-legs2-1 {
+  15% {
+    left: 13px;
+    transform: rotate(-30deg);
+  }
+  30% {
+    left: 2px;
+    transform: rotate(20deg);
+  }
+  45% {
+    left: 13px;
+    transform: rotate(-30deg);
+  }
+  60% {
+    left: 2px;
+    transform: rotate(20deg);
+  }
+  75% {
+    left: 13px;
+    transform: rotate(-30deg);
+  }
+  99% {
+    left: 2px;
+    transform: rotate(20deg);
+  }
+}
+@keyframes anim-human-legs2-2 {
+  15% {
+    left: 3px;
+    transform: rotate(20deg);
+  }
+  30% {
+    left: 12px;
+    transform: rotate(-30deg);
+  }
+  45% {
+    left: 3px;
+    transform: rotate(20deg);
+  }
+  60% {
+    left: 12px;
+    transform: rotate(-30deg);
+  }
+  75% {
+    left: 3px;
+    transform: rotate(20deg);
+  }
+  99% {
+    left: 12px;
+    transform: rotate(-30deg);
+  }
+}
+@keyframes anim-human-head {
+  50% {
+    left: 10px;
+    top: 5px;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  to {
+    left: -10px;
+    top: 5px;
+  }
+}
+@keyframes anim-human-head2 {
+  50% {
+    left: -10px;
+    top: 5px;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  to {
+    left: 10px;
+    top: 5px;
+  }
+}
+.container:hover .box1 {
+  animation-name: anim-block1;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.container:hover .box3 {
+  animation-name: anim-block3;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.container:hover .box2 {
+  animation-name: anim-block2;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+.container:hover .human1 {
+  animation-name: anim-human1;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+.container:hover .human2 {
+  animation-name: anim-human2;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+.container:hover .human-leg1-1 {
+  animation-name: anim-human-legs1-1;
+  animation-duration: 3s;
+}
+.container:hover .human-leg1-2 {
+  animation-name: anim-human-legs1-2;
+  animation-duration: 3s;
+}
+.container:hover .human-leg2-1 {
+  animation-name: anim-human-legs2-1;
+  animation-duration: 3s;
+}
+.container:hover .human-leg2-2 {
+  animation-name: anim-human-legs2-2;
+  animation-duration: 3s;
+}
+.container:hover .human-head {
+  animation-name: anim-human-head;
+  animation-duration: 5s;
+}
+.container:hover .human-head2 {
+  animation-name: anim-human-head2;
+  animation-duration: 5s;
+}
